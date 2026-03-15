@@ -1,0 +1,47 @@
+{
+  "name": "dictately",
+  "version": "1.0.0",
+  "description": "Desktop voice dictation app powered by Whisper",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "postinstall": "electron-builder install-app-deps",
+    "package": "electron-vite build && electron-builder --mac",
+    "rebuild-native": "electron-rebuild -f -w dictately-native"
+  },
+  "keywords": [
+    "dictation",
+    "voice",
+    "speech-to-text",
+    "whisper",
+    "transcription",
+    "electron",
+    "local-first",
+    "macos",
+    "accessibility"
+  ],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.2.0",
+    "dictately-native": "file:native",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^4.0.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "electron": "^41.0.2",
+    "electron-builder": "^26.8.1",
+    "electron-vite": "^5.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}

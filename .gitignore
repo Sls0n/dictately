@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+native/node_modules/
+
+# Build output
+out/
+dist/
+
+# Native module build artifacts
+native/build/
+
+# whisper.cpp build artifacts
+.whisper-build/
+
+# Bundled binaries (built locally)
+resources/whisper-server
+resources/whisper-server-libs/
+resources/models/
+
+# Electron packaging
+*.dmg
+*.zip
+*.app
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# npm
+.npm/
+
+# electron-gyp
+.electron-gyp/
+
+# Environment / secrets
+.env
+.env.*
