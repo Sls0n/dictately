@@ -1,0 +1,42 @@
+appId: com.dictately.app
+productName: Dictately
+directories:
+  buildResources: build
+beforePack: ./scripts/electron-builder-before-pack.js
+mac:
+  target:
+    - target: dmg
+      arch: arm64
+  category: public.app-category.productivity
+  entitlements: build/entitlements.mac.plist
+  hardenedRuntime: false
+extraResources:
+  - from: resources/whisper-server
+    to: whisper-server
+    filter:
+      - "**/*"
+  - from: resources/whisper-server-libs
+    to: whisper-server-libs
+    filter:
+      - "**/*.dylib"
+  - from: resources/models
+    to: models
+    filter:
+      - "**/*"
+  - from: resources/sounds
+    to: sounds
+    filter:
+      - "**/*"
+asar:
+  smartUnpack: true
+asarUnpack:
+  - "**/*.node"
+dmg:
+  contents:
+    - x: 130
+      "y": 220
+      type: file
+    - x: 438
+      "y": 220
+      type: link
+      path: /Applications
