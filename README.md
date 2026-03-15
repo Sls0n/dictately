@@ -25,6 +25,9 @@ A pre-built `.dmg` for macOS (Apple Silicon) will be available soon. In the mean
 - **Node.js** >= 18
 - **~4 GB disk space** for the Whisper model and compiled server
 
+> [!WARNING]
+> Dictately uses [OpenAI's Whisper](https://github.com/openai/whisper) model (Large-v3, ~3 GB) via [whisper.cpp](https://github.com/ggerganov/whisper.cpp) for speech recognition. The model must be downloaded locally before first use — see the setup steps below. No OpenAI API key or account is needed; the model runs entirely on your Mac.
+
 ## Setup
 
 ```bash
